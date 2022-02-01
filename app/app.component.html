@@ -1,0 +1,66 @@
+
+    <!-- <title>Todo list</title> 
+
+      <div class="box1">
+        <form class="header" >
+      <input type="text" id="myInput" placeholder="What needs to be done?">
+      <button class="btn" type="submit" style="color:white"><i class="fa far fa-plus-circle"></i>  Add</button>
+       </form>
+
+      <div class="box2">
+        <div class="box3">
+         <h2 style="padding:10px">Todo List </h2>
+
+        </div>
+        
+        <form class="type1" action="index.html" method="post" style="padding:25px">
+
+         <input type="checkbox">
+         <input type="checkbox">
+          <label>Test React Ant Design Todo List </label>
+          <button type="button" name="button" style="margin-left:630px;color:red"><i class="fa far fa-trash"></i></button><br><hr>
+          <input type="checkbox">
+          <input type="checkbox">
+          <label>Write About React And Ant Design </label>
+          <button type="button" name="button" style="margin-left:613px;color:red"><i class="fa far fa-trash"></i></button><br><hr>
+          <input type="checkbox">
+          <input type="checkbox">
+          <label><del>Finalize Presentation</del></label>
+          <button type="button" name="button" style="margin-left:710px;color:red"><i class="fa far fa-trash"></i></button><br><hr>
+          <input type="checkbox">
+          <input type="checkbox">
+          <label>Book Flight To Ireland</label>
+          <button type="button" name="button" style="margin-left:700px;color:red"><i class="fa far fa-trash"></i></button>
+          
+        </form> 
+
+
+      </div>
+  </div> -->
+
+
+
+
+<div class="box1">
+<input type="text" id="myinput" placeholder ="What needs to be done?" #task />
+  <button class="btn" (click)="addTask(task.value)"> <i class="fa far fa-plus-circle"></i> Add </button>
+
+
+<div class="box2">
+  <div class="box3">
+   <h2 style="padding:10px">Todo List </h2>
+
+ </div>
+
+  <ul *ngFor="let item of list">
+    <input type="checkbox">
+    <input type="checkbox">
+    {{item.name}} <button class="remove" (click)="removeTask(item.id)"><i class="fa far fa-trash"></i></button>
+  </ul>
+  
+  </div>
+</div>
+
+  
+
+
